@@ -13,6 +13,16 @@ Design, requirements, and direction. The active pre-v1.0.0 bug/feature task list
 
 ### Folder structure
 
+Repo root stays clean, matching the nemo-anywhere layout: docs and license files plus a few top-level dirs.
+
+- `source/` - the buildable project: a cargo workspace (`source/Cargo.toml`), with crates under `source/crates/`. Point cargo here.
+	- `crates/captain-nemo/` - the application binary crate. Further crates get split out as real boundaries emerge, not up front.
+- `project/` - design and backlog.
+- `utility/` - standalone helper scripts.
+- `.github/` - repo metadata only.
+
+Toolchain and formatting are pinned in-tree: `source/rust-toolchain.toml` (stable channel) and `source/rustfmt.toml` (tabs). rustfmt output is canonical. Release profile builds for small-and-fast: fat LTO, one codegen unit, stripped.
+
 ### Logical code structure
 
 ### Data flow

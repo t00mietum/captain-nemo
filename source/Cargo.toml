@@ -1,0 +1,16 @@
+[workspace]
+resolver = "3"
+members = ["crates/captain-nemo"]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2024"
+license = "GPL-2.0-only"
+repository = "https://github.com/t00mietum/captain-nemo"
+
+# Size and speed both matter for the shipped binary.
+[profile.release]
+lto = "fat"
+codegen-units = 1
+strip = true
+opt-level = 3
