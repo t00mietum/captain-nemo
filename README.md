@@ -5,12 +5,10 @@
 <!-- markdownlint-disable MD041 -- First line in a file should be a top-level heading -->
 <div align="center">
 
-[![!#/bin/bash](https://img.shields.io/badge/-%23!%2Fbin%2Fbash-1f425f.svg?logo=gnu-bash)](https://www.gnu.org/software/bash/)
+[![made-with-rust](https://img.shields.io/badge/Made%20with-Rust-1f425f.svg)](https://www.rust-lang.org/)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPLv2%2B-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 ![Lifecycle: Alpha](https://img.shields.io/badge/Lifecycle-Alpha-orange)
 ![Support](https://img.shields.io/badge/Support-Maintained-brightgreen)
-![Coverage](https://img.shields.io/badge/Coverage-75%25-yellow)
-![Status: Passing](https://img.shields.io/badge/Status-Passing-brightgreen)
 
 </div>
 <!--
@@ -44,18 +42,13 @@
 -->
 
 <!-- TOC ignore:true -->
-# TEMPLATE
+# Captain Nemo
 
-<table style="border: none; border-collapse: collapse;">
-	<tr style="border: none; border-collapse: collapse;">
-		<td style="border: none; border-collapse: collapse;"><img src="assets/logo.png" alt="Logo" width="320"/></td>
-		<td style="border: none;">This is a thing.</td>
-	</tr>
-</table>
+Captain Nemo is a next-generation port of [Nemo Anywhere](https://github.com/t00mietum/nemo-anywhere).
 
-<p align="center"><img src="assets/logo.png" alt="" width="128"></p>
+This is placeholder project for now. Real coding work won't begin until [Nemo Anywhere](https://github.com/t00mietum/nemo-anywhere) has it's first stable release.
 
-This is a thing.
+(Nemo Anywhere is itself a hard fork of the OG Linux Mint [Nemo](https://github.com/linuxmint/nemo) file manager, which in turn was a hard fork of Gnome [Nautilus](https://github.com/GNOME/nautilus) file manager.)
 
 <!-- TOC ignore:true -->
 ## Table of contents
@@ -66,17 +59,44 @@ This is a thing.
 - [Features](#features)
 - [Installing](#installing)
 - [Building from source](#building-from-source)
+- [Contributing](#contributing)
 - [Copyright and license](#copyright-and-license)
 
 <!-- /TOC -->
 
 ## Why
 
+The sister project [Nemo Anywhere](https://github.com/t00mietum/nemo-anywhere) was the first step in:
+
+- Removing Cinnamon Desktop dependencies.
+
+- Removing desktop management functionality. (It's a file manager - it shouldn't also be a desktop manager.)
+
+- Porting to fully-functional, first-class Windows and macOS applications.
+
+- Adding a few "quality of life" features and default settings.
+
+But for truly maximum cross-platform portability, Nemo Anywhere needs to move off of not just GTK+ v3, but GTK+ period. While it works, GTK+3 is no longer actively developed, is basically stuck with C, and is comparatively weak and fragile on Windows and macOS - platforms it was never originally designed to run on.
+
+There were originally two main options being considered for Captain Nemo (once Nemo Anywhere reaches v1.0.0 stable):
+
+- Rust and QML. (QML is the next evolution of Qt widgets.) This is the most viable language option for moving away from C and for long-term maintenance. But the only viable QML bindings for Rust is `cxx-qt`. While it seems fine for now, it also carries a non-trivial vendor dependency and risk.
+
+	- Mitigation strategy: Use `cxx-qt`, but also maintain a hard-forked subset of only the parts needed, and keep it up-to-date as we go. If and when the time comes that `cxx-qt` is ever abandoned, falls behind QML, and/or pursues different goals: Our minimal hard fork is ready to go.
+
+- Idiomatic/RAII C++ v23, combined with native QML bindings. Harder to port the code (ironically in spite of both having the same ancestry), but less risk with QML.
+
+Rust and QML seems the obvious choice going forward.
+
 ## Features
 
 ## Installing
 
 ## Building from source
+
+## Contributing
+
+See [contributing.md](contributing.md) for process, and [style-guide.md](style-guide.md) for code and doc style.
 
 ## Copyright and license
 
