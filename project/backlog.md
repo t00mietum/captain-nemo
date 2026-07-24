@@ -78,6 +78,8 @@ In each section, items are listed approximately from newest to oldest.
 
 #### Done - Initial requirements
 
+- ✅ Canonical `style-guide.md` at repo root; README and contributing.md point to it; clippy pedantic wired in as a workspace lint; rustfmt defaults.
+
 #### Done - Bugs
 
 #### Done - Features and enhancements
