@@ -5,8 +5,12 @@ members = ["crates/captain-nemo"]
 [workspace.package]
 version = "0.0.1"
 edition = "2024"
-license = "GPL-2.0-only"
+license = "GPL-2.0-or-later"
 repository = "https://github.com/t00mietum/captain-nemo"
+
+# Clippy pedantic is the project bar; see style-guide.md.
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
 
 # Size and speed both matter for the shipped binary.
 [profile.release]
