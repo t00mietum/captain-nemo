@@ -1,0 +1,9 @@
+[package]
+name = "captain-nemo"
+description = "Ground-up Rust refactor of the Nemo Anywhere file manager"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
