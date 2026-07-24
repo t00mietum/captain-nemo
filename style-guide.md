@@ -35,7 +35,7 @@ Names exist so a human can read them, and later find and change them.
 
 - Use meaningful names. `upper_bound` beats `ub`. If a plain-text search for the name would drown in false hits or find nothing, the name is wrong.
 
-- Don't overcorrect. Names don't need to be long or globally unique - just clear and findable.
+- But don't overcorrect. Names don't need to be long or globally unique - just clear and findable.
 
 - Single-letter names are fine where idiomatic: loop counters (`for i in ...`), and short-lived conventional locals.
 
@@ -51,9 +51,9 @@ Comments explain why, not what. The code already says what.
 
 - ASCII only: `->` not a unicode arrow, `-` not an em dash. Exception: `(C)` in copyright lines is written with the copyright sign.
 
-- Language-standard comment syntax always wins over house style. Rust uses `//` and `///`; don't import shell-style `##` conventions into it.
+- Language-standard comment syntax always wins over house style. Rust uses `//` and `///`.
 
-- No decorative flowerboxing. The one standing exception is the full-width `#•••` section rule in bash scripts that already use it - match that existing style there, and only there.
+- No decorative flowerboxing. The one standing exception is the full-width `#•••` section rule in bash scripts that already use it; match that existing style there, and only there.
 
 ## File headers, copyright, and license
 

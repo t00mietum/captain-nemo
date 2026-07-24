@@ -68,15 +68,15 @@ This is placeholder project for now. Real coding work won't begin until [Nemo An
 
 The sister project [Nemo Anywhere](https://github.com/t00mietum/nemo-anywhere) was the first step in:
 
-- Removing Cinnamon Desktop dependencies.
+- Removing Cinnamon Desktop dependencies from Nemo, so that it can install cleanly on non-Cinnamon desktop environments.
 
-- Removing desktop management functionality. (It's a file manager - it shouldn't also be a desktop manager.)
+- Removing desktop management functionality. (While that was arguably fine for the Cinnamon Desktop, conceptually Nemo is a file manager first and foremost - it shouldn't also be a desktop manager. Arguably, the "Desktop" should in general be a separate program, independent of a separate file manager.)
 
 - Porting to fully-functional, first-class Windows and macOS applications.
 
 - Adding a few "quality of life" features and default settings.
 
-But for truly maximum cross-platform portability, Nemo Anywhere needs to move off of not just GTK+ v3, but GTK+ period. While it works, GTK+3 is no longer actively developed, is basically stuck with C, and is comparatively weak and fragile on Windows and macOS - platforms it was never originally designed to run on.
+But for truly maximum cross-platform portability, Nemo Anywhere needs to eventually move off of not just GTK+ v3, but GTK+ period. While it works, GTK+3 is no longer actively developed, is basically stuck with C, and is comparatively weak and fragile on Windows and macOS. (GTK+ was never originally designed to run on Windows or macOS, and they remain sort of "second-class citizens".)
 
 There were originally two main options being considered for Captain Nemo (once Nemo Anywhere reaches v1.0.0 stable):
 
@@ -99,6 +99,15 @@ Rust and QML seems the obvious choice going forward.
 See [contributing.md](contributing.md) for process, and [style-guide.md](style-guide.md) for code and doc style.
 
 ## Copyright and license
+
+This is an all-new work, with so far a singular copyright holder. But obviously with an existing open-source project to base logic and look-and-feel on.
+
+So it's well-worth acknowledging the great effort and years of development by the [many contributors](https://github.com/linuxmint/nemo/graphs/contributors) of the Linux Mint project (and original Nemo).
+
+Without the [original Nemo](https://github.com/linuxmint/nemo), there would not have ever been [Nemo Anywhere](https://github.com/t00mietum/nemo-anywhere). And without that, no Captain Nemo.
+
+The [original Nemo](https://github.com/linuxmint/nemo) is the work of the Linux Mint project, and is itself a hard fork from 2012 of [GNOME Files aka Nautilus](https://github.com/GNOME/nautilus).
+
 
 > Copyright © 2026 Jim Collier (ID: 1cv◂‡Vᛦ)<br />
 > Licensed under [GNU GPL v2 Or Later License](https://spdx.org/licenses/GPL-2.0-or-later.html) license. No warranty.
