@@ -109,7 +109,7 @@ Without the [original Nemo](https://github.com/linuxmint/nemo), there would not 
 The [original Nemo](https://github.com/linuxmint/nemo) is the work of the Linux Mint project, and is itself a hard fork from 2012 of [GNOME Files aka Nautilus](https://github.com/GNOME/nautilus).
 
 
-> Copyright © 2026 Jim Collier (ID: 1cv◂‡Vᛦ)<br />
+> Copyright © 2026 Jim Collier [ID: 2უNაɘ«҂թȹɤξπ๙¿ձϖ]<br />
 > Licensed under [GNU GPL v2 Or Later License](https://spdx.org/licenses/GPL-2.0-or-later.html) license. No warranty.
 <!--
 > Licensed under the [MIT License](https://mit-license.org/). No warranty.
