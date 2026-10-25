@@ -41,6 +41,9 @@ This is a product backlog just for pre-v1.0.0 release. After that, bugs, feature
 - Build, CI/CD, and install
 
 	- 🔘 A CI/CD pipeline kicked off by a bash script (`cicd/cicd.bash`): builds, tests, and can commit and push. Packaging and publishing are opt-in.
+		- 2026-10-24: built per the shared CICD rules as reset that day, scaled to what the project has. That means the standard flags and run lengths, the step output lines, a pinned build container with a host fallback, half the CPUs or a quarter on a busy box under `nice`, a temp folder per run with the safe removal guard, labeled containers cleaned up after each run, test IDs in minutes, and `--merge-gate` from the pre-push hook on main only.
+		- Sweeping override, 2026-10-24: this supersedes any earlier decision on this project that conflicts with it.
+		- Overrides: "Packaging and publishing are opt-in" above, since the default run packages and dogfoods.
 
 	- 🔘 Dev-environment install script (Linux bash, macOS sh, Windows PowerShell), runnable via a single `curl`/`wget` and documented under "how to develop". Clones main, installs dependencies, and states what it will do with an option to abort.
 
